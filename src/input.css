@@ -3,9 +3,8 @@
 @theme {
   --color-primary: #010a5e;
   --color-primary-light: #010d78;
-  --color-secondary: #FFCC00;
+  --color-secondary: #ffcc00;
   --color-paragraph: #c0c0c0;
-
 }
 
 @layer base {
@@ -13,5 +12,25 @@
     @apply text-white bg-primary tracking-wider;
   }
 
+  section {
+    @apply pt-16 pb-4 md:pt-20;
+  }
 }
 
+@layer utilities {
+  .home_title {
+    @apply text-4xl font-bold uppercase lg:text-6xl;
+  }
+
+  .separator {
+    @apply w-28 h-0.5 my-5 bg-secondary mx-auto;
+  }
+
+  .paragraph {
+    @apply text-paragraph text-xs leading-5;
+  }
+}
+
+/* @utility separator {
+  @apply w-28 h-0.5 my-5 bg-secondary mx-auto;
+} */
