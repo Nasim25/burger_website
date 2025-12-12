@@ -33,7 +33,7 @@
   }
 
   .separator {
-    @apply w-28 h-0.5 my-5 bg-secondary mx-auto;
+    @apply w-28 h-0.5 my-5 bg-secondary;
   }
 
   .paragraph {
@@ -41,6 +41,12 @@
   }
 }
 
-/* @utility separator {
-  @apply w-28 h-0.5 my-5 bg-secondary mx-auto;
-} */
+@keyframes move {
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+@utility movingY {
+  animation: move 2s linear infinite;
+}
+
