@@ -33,7 +33,7 @@
   }
 
   .card_title {
-    @apply text-2xl;
+    @apply text-xl;
   }
 
   .separator {
