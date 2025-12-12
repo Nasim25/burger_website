@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #010a5e;
+  --color-primary-light: #010d78;
+  --color-secondary: #FFCC00;
+  --color-paragraph: #c0c0c0;
+
+}
+
+@layer base {
+  body {
+    @apply text-white bg-primary tracking-wider;
+  }
+
+}
+
