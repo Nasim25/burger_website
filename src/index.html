@@ -104,7 +104,11 @@
           class="container mx-auto p-2 flex flex-col gap-10 items-center justify-center md:flex-row md:gap-20"
         >
           <div class="mx-auto md:basis-1/2 lg:basis-2/5 movingY">
-            <img class="w-60 md:w-full " src="img/home-image.png" alt="home image" />
+            <img
+              class="w-60 md:w-[80%]"
+              src="img/home-image.png"
+              alt="home image"
+            />
           </div>
           <div class="text-center md:basis-1/2 lg:basis-3/5 md:text-start">
             <h1 class="home_title">HAPPY TUMMY WITH TASTY BURGER</h1>
@@ -113,13 +117,15 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
               autem quidem velit, eaque ipsum, ea molestiae accusamus rem fugit
               eos quos cupiditate vitae dolorum, sequi labore. Repudiandae dicta
-              voluptates tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              autem quidem velit, eaque ipsum, ea molestiae accusamus rem fugit
-              eos quos cupiditate vitae dolorum, sequi labore. Repudiandae dicta
-              voluptates tempore.
+              voluptates tempore. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quaerat autem quidem velit, eaque ipsum, ea
+              molestiae accusamus rem fugit eos quos cupiditate vitae dolorum,
+              sequi labore. Repudiandae dicta voluptates tempore.
             </p>
 
-            <div class="flex items-center justify-center gap-4 text-base py-10 md:justify-start md:gap-20">
+            <div
+              class="flex items-center justify-center gap-4 text-base py-10 md:justify-start md:gap-20"
+            >
               <div class="text-center">
                 <i class="fa-solid fa-utensils text-secondary text-4xl"></i>
                 <br />
@@ -143,7 +149,64 @@
       </section>
 
       <!--~~~~~~~~~~~~~~~ Category ~~~~~~~~~~~~~~~-->
-      <section id="category"></section>
+      <section id="category">
+        <div class="container mx-auto p-4 flex flex-col gap-4 md:flex-row">
+          <!-- card one -->
+          <div class="flex py-3 bg-secondary rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img
+                class="absolute w-28 -left-4 -bottom-4"
+                src="img/burger-1.png"
+                alt="category bg"
+              />
+            </div>
+            <div>
+              <div class="mb-2">
+                <h1 class="card_title">FOOD</h1>
+                <p class="text-xs">Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+
+              <a href="#" class="text-black cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+          <!-- card two -->
+          <div class="flex py-3 bg-red-500 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img
+                class="absolute w-28 -left-4 -bottom-4"
+                src="img/snack-1.png"
+                alt="category bg"
+              />
+            </div>
+            <div>
+              <div class="mb-2">
+                <h1 class="card_title">SNACK</h1>
+                <p class="text-xs">Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+
+              <a href="#" class="text-secondary cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+          <!-- card three -->
+          <div class="flex py-3 bg-green-500 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img
+                class="absolute w-28 -left-4 -bottom-4"
+                src="img/beverage-1.png"
+                alt="category bg"
+              />
+            </div>
+            <div>
+              <div class="mb-2">
+                <h1 class="card_title">Beverage</h1>
+                <p class="text-xs">Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+
+              <a href="#" class="text-secondary cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~-->
       <section id="promo"></section>

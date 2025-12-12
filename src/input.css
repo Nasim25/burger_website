@@ -28,8 +28,12 @@
 }
 
 @layer utilities {
-  .home_title {
+  .home_title, .card_title{
     @apply text-4xl font-bold uppercase lg:text-6xl;
+  }
+
+  .card_title {
+    @apply text-2xl;
   }
 
   .separator {
@@ -49,4 +53,3 @@
 @utility movingY {
   animation: move 2s linear infinite;
 }
-
