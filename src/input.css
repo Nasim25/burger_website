@@ -25,6 +25,10 @@
   .btn-primary {
     @apply bg-secondary text-black hover:opacity-75;
   }
+
+  .btn-secondary {
+    @apply bg-primary-light text-white hover:opacity-75;
+  }
 }
 
 @layer utilities {
@@ -42,6 +46,10 @@
 
   .paragraph {
     @apply text-paragraph text-xs leading-5;
+  }
+
+  .tab_wrap ul li:hover, .tab_wrap ul li.active{
+    @apply bg-secondary
   }
 }
 
