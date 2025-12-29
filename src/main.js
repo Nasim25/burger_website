@@ -70,3 +70,41 @@ themeBtn.addEventListener("click", (e) => {
     localStorage.setItem("theme", "dark");
   }
 });
+
+const activeLink = () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav__link");
+
+  let current = "home";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+
+    if (this.scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((item) => {
+    item.classList.remove("text-secondary");
+
+    if (item.href.includes(current)) {
+      item.classList.add("text-secondary");
+    }
+  });
+};
+
+window.addEventListener("scroll", activeLink);
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 200,
+});
+
+sr.reveal(".home_image");
+sr.reveal(".home_content", { origin: "bottom"});
+sr.reveal(".category_card", { interval: 300});
+sr.reveal(".promo_card-1", { origin: "left"});
+sr.reveal(".promo_card-2", { origin: "right"});
