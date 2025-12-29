@@ -31,6 +31,7 @@ tabs.forEach((tab) => {
 
 const scrollUp = () => {
   const scrollUpBtn = document.getElementById("scrollBtn");
+  const scrollHeader = document.getElementById("header");
 
   if (this.scrollY >= 250) {
     scrollUpBtn.classList.remove("-right-1/2");
@@ -39,6 +40,33 @@ const scrollUp = () => {
     scrollUpBtn.classList.add("-right-1/2");
     scrollUpBtn.classList.remove("right-4");
   }
+
+  if (this.scrollY >= 50) {
+    scrollHeader.classList.add("border-b", "border-secondary");
+  } else {
+    scrollHeader.classList.remove("border-b", "border-secondary");
+  }
 };
 
 window.addEventListener("scroll", scrollUp);
+
+const html = document.querySelector("html");
+const themeBtn = document.getElementById("theme-icon");
+
+if (localStorage.theme === "dark") {
+  html.classList.add("dark");
+  themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
+  localStorage.setItem("theme", "dark");
+}
+
+themeBtn.addEventListener("click", (e) => {
+  if (localStorage.theme === "dark") {
+    html.classList.remove("dark");
+    themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
+    localStorage.setItem("theme", "light");
+  } else {
+    html.classList.add("dark");
+    themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
+    localStorage.setItem("theme", "dark");
+  }
+});

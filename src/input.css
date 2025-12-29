@@ -1,18 +1,20 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --color-primary: #010a5e;
   --color-primary-light: #010d78;
   --color-secondary: #ffcc00;
   --color-paragraph: #c0c0c0;
+  --color-darkColor: #000;
+  --color-dark-light: #141313;
 }
 
 @layer base {
   html {
-    @apply scroll-smooth
+    @apply scroll-smooth;
   }
   body {
-    @apply text-white bg-primary tracking-wider;
+    @apply text-white bg-primary tracking-wider dark:bg-darkColor;
   }
 
   section {
@@ -30,12 +32,13 @@
   }
 
   .btn-secondary {
-    @apply bg-primary-light text-white hover:opacity-75;
+    @apply bg-primary-light dark:bg-dark-light text-white hover:opacity-75;
   }
 }
 
 @layer utilities {
-  .home_title, .card_title{
+  .home_title,
+  .card_title {
     @apply text-4xl font-bold uppercase lg:text-6xl;
   }
 
@@ -51,8 +54,9 @@
     @apply text-paragraph text-xs leading-5;
   }
 
-  .tab_wrap ul li:hover, .tab_wrap ul li.active{
-    @apply bg-secondary
+  .tab_wrap ul li:hover,
+  .tab_wrap ul li.active {
+    @apply bg-secondary;
   }
 }
 
