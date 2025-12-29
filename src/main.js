@@ -28,3 +28,17 @@ tabs.forEach((tab) => {
     tab.classList.add("active");
   });
 });
+
+const scrollUp = () => {
+  const scrollUpBtn = document.getElementById("scrollBtn");
+
+  if (this.scrollY >= 250) {
+    scrollUpBtn.classList.remove("-right-1/2");
+    scrollUpBtn.classList.add("right-4");
+  } else {
+    scrollUpBtn.classList.add("-right-1/2");
+    scrollUpBtn.classList.remove("right-4");
+  }
+};
+
+window.addEventListener("scroll", scrollUp);
